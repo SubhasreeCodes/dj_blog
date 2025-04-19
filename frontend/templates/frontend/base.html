@@ -15,10 +15,15 @@
         .blog-title {
             font-family: 'Georgia', serif;
         }
+        /* Footer fixed to bottom-right corner */
         .footer {
-            margin-top: 50px;
-            text-align: center;
+            position: fixed;
+            bottom: 10px;
+            right: 545px;
+            text-align: right;
+            font-size: 0.9rem;
             color: var(--bs-secondary-color);
+            z-index: 1000;
         }
         #theme-toggle {
             border: none;
@@ -44,7 +49,7 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
+    <!-- Footer fixed at bottom-right -->
     <footer class="footer">
         <p>© 2025 My Blog. All rights reserved.</p>
     </footer>
