@@ -1,7 +1,14 @@
 {% extends 'frontend/base.html' %}
 {% block title %}{{ blog.title }}{% endblock %}
 {% block content %}
-    <h2>{{ blog.title }}</h2>
-    <p><strong>By {{ blog.author }} on {{ blog.created_at }}</strong></p>
-    <p>{{ blog.content }}</p>
+    <article>
+        <h1 class="display-5 mb-3">{{ blog.title }}</h1>
+        <p class="text-muted">
+            <small>By {{ blog.author }} on {{ blog.created_at|date:"F d, Y" }}</small>
+        </p>
+        <div class="mt-4">
+            <p>{{ blog.content|linebreaks }}</p>
+        </div>
+        <a href="{% url 'home' %}" class="btn btn-link mt-4">← Back to Home</a>
+    </article>
 {% endblock %}
