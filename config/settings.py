@@ -31,6 +31,9 @@ ALLOWED_HOSTS = [
     'https://dj-blog-uuvk.onrender.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://dj-blog-uuvk.onrender.com",
+]
 
 # Application definition
 
